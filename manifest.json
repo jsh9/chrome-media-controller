@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Media Controller",
+  "description": "Control video/audio in the webpage with keyboard shortcuts",
+  "version": "0.0.1",
+  "icons": {
+    "48": "icon.png"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "action": {
+    "default_popup": "",
+    "default_icon": {
+      "48": "icon.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
