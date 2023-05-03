@@ -5,7 +5,9 @@ A Chrome or Edge extension to use keyboard to control webpage media (video and a
 
 ## 1. Installation
 
-(To be published onto the Chrome Web Store...)
+This extension is published on the Chrome Web Store: https://chrome.google.com/webstore/detail/media-controller/eaecmocjfoffkdgcgmjfipbnfmakeane
+
+(Edge supports installing Chrome extensions directly.)
 
 
 ## 2. How to use
