@@ -1,16 +1,45 @@
 document.addEventListener('keydown', handleKeyDown);
 
+const allowedUrls = [
+  'https://www.youtube.com/watch*',
+  'https://www.netflix.com/watch/*',
+  'https://play.hbomax.com/player/*',
+  'https://podcasts.google.com/*',
+  'https://www.paramountplus.com/shows/video/*',
+  'https://www.disneyplus.com/video/*',
+  'https://www.amazon.com/gp/video/detail/*',
+  'https://www.hulu.com/watch/*',
+];
+
+function isUrlAllowed(allowedUrls, urlToCheck) {
+  console.log(`urlToCheck: ${urlToCheck}`);
+  return allowedUrls.some(url => {
+    const regex = new RegExp("^" + url.replace("*", ".*") + "$");
+    return regex.test(urlToCheck);
+  });
+}
 
 function handleKeyDown(event) {
+  const currentUrl = window.location.href;
+
+  console.log(`currentUrl: ${currentUrl}`);
+
+  if (!isUrlAllowed(allowedUrls, currentUrl)) {
+    console.log('URL not in the allowlist for Media Controller');
+    return;
+  }
+
+  console.log('Allowed');
+
   if (  // k, j, l, m, <, > are already defined in YouTube
-    window.location.hostname.includes('youtube.com')
+    currentUrl.includes('youtube.com')
     && ['k', 'j', 'l', 'm', '<', '>'].includes(event.key)
   ) {
     return;
   }
 
   if (  // j & l cause issues on Netflix
-    window.location.hostname.includes('netflix.com')
+    currentUrl.includes('netflix.com')
     && ['j', 'l'].includes(event.key)
   ) {
     return;
