@@ -3,7 +3,7 @@ document.addEventListener('keydown', handleKeyDown);
 const allowedUrls = [
   'https://www.youtube.com/watch*',
   'https://www.netflix.com/watch/*',
-  'https://play.hbomax.com/player/*',
+  'https://play.max.com/video/watch/*',
   'https://podcasts.google.com/*',
   'https://www.paramountplus.com/shows/video/*',
   'https://www.disneyplus.com/video/*',

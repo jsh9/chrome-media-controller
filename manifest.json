@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Media Controller",
   "description": "Control video/audio in the webpage with keyboard shortcuts",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "icons": {
     "48": "icon.png"
   },
