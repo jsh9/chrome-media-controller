@@ -6,6 +6,7 @@ const allowedUrls = [
   'https://play.max.com/video/watch/*',
   'https://podcasts.google.com/*',
   'https://www.paramountplus.com/shows/video/*',
+  'https://www.paramountplus.com/movies/video/*',
   'https://www.disneyplus.com/video/*',
   'https://www.amazon.com/gp/video/detail/*',
   'https://www.hulu.com/watch/*',
